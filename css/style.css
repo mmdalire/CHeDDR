@@ -1,0 +1,65 @@
+/* Variables */
+:root {
+    --primaryColor: rgb(140, 198, 63);
+    --secondaryColor: rgb(121, 63, 198);
+    --white: rgb(255, 255, 255);
+}
+
+/* Global */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+/*Header*/
+header {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.9920343137254902) 0%, rgba(121,63,198,1) 0%, rgba(94,130,166,0.8995973389355743) 100%);
+}
+
+header img {
+    width: 70px;
+    float: left;
+}
+
+nav {
+    float: right;
+    margin-top: 17px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+    height: 100%;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a:hover{
+    background-color: white;
+    color: var(--secondaryColor);
+}

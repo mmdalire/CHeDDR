@@ -8,6 +8,7 @@
 /* Global */
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
@@ -22,7 +23,7 @@ a{
     overflow: hidden;
 }
 
-/*Header*/
+/*Navigation bar*/
 header {
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0.9920343137254902) 0%, rgba(121,63,198,1) 0%, rgba(94,130,166,0.8995973389355743) 100%);
@@ -62,4 +63,31 @@ nav ul li {
 nav a:hover{
     background-color: white;
     color: var(--secondaryColor);
+}
+
+/*Media queries*/
+/*Navigation bar*/
+@media (max-width: 768px) {
+    .container{
+        margin: auto;
+        width: 80%;
+    }
+
+    header img{
+        display: block;
+        width: 150px;
+        margin: auto;
+        float: none;
+    }
+
+    nav {
+        float: none;
+        margin: auto;
+        line-height: 3rem;
+    }
+
+    nav ul li {
+        text-align: center;
+        display: block;
+    }
 }

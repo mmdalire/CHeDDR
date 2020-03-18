@@ -1,3 +1,6 @@
+/*Import*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 /* Variables */
 :root {
     --primaryColor: rgb(140, 198, 63);
@@ -10,7 +13,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    background-color: var(--secondaryColor);
 }
 
 a{
@@ -36,7 +44,7 @@ header img {
 
 nav {
     float: right;
-    margin-top: 17px;
+    margin: 17px 0;
 }
 
 nav a {
@@ -65,6 +73,89 @@ nav a:hover{
     color: var(--secondaryColor);
 }
 
+/*Image slider section*/
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 50px;
+    right: -400px;
+    opacity: 0;
+    width: 400px;
+
+    background-color: var(--primaryColor);
+    color: var(--white);
+
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0px rgb(99, 140, 27);
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(-400px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#prev {
+    position: absolute;
+    left: 46%;
+}
+
+.buttons button#slide_1 {
+    position: absolute;
+    left: 48%;
+}
+
+.buttons button#slide_2 {
+    position: absolute;
+    left: 50%;
+}
+
+.buttons button#slide_3 {
+    position: absolute;
+    left: 52%;
+}
+
+.buttons button#slide_4 {
+    position: absolute;
+    left: 54%;
+}
+
+.buttons button#next {
+    position: absolute;
+    left: 56%;
+}
+
+.buttons button {
+    top: 70%;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+}
+
 /*Media queries*/
 /*Navigation bar*/
 @media (max-width: 768px) {
@@ -90,4 +181,29 @@ nav a:hover{
         text-align: center;
         display: block;
     }
+}
+
+/*Background images*/
+.slide:first-child {
+    background: url(../images/carousel_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: top -200px right 60%;
+}
+
+.slide:nth-child(2) {
+    background: url(../images/carousel_2.png) no-repeat;
+    background-size: cover;
+    background-position: top -140px right 50%;
+}
+
+.slide:nth-child(3) {
+    background: url(../images/carousel_3.jpg) no-repeat;
+    background-size: cover;
+    background-position: top -40px right 50%;
+}
+
+.slide:nth-child(4) {
+    background: url(../images/carousel_4.jpg) no-repeat;
+    background-size: cover;
+    background-position: top -150px right 50%;
 }

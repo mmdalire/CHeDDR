@@ -95,12 +95,17 @@ nav a:hover{
     opacity: 1;
 }
 
+.slide .content h1 {
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
 .slide .content {
     position: absolute;
-    bottom: 50px;
-    right: -400px;
+    bottom: 10px;
+    right: -470px;
     opacity: 0;
-    width: 400px;
+    width: 500px;
 
     background-color: var(--primaryColor);
     color: var(--white);
@@ -112,38 +117,56 @@ nav a:hover{
 
 .slide.current .content {
     opacity: 1;
-    transform: translateX(-400px);
+    transform: translateX(-480px);
     transition: all 0.7s ease-in-out 0.3s;
 }
 
 .buttons button#prev {
+    color: var(--secondaryColor);
+    opacity: 0.5;
+    top: 35%;
     position: absolute;
-    left: 46%;
+    left: 1%;
+}
+
+.buttons button#prev:hover {
+    opacity: 1;
 }
 
 .buttons button#slide_1 {
+    color: var(--secondaryColor);
     position: absolute;
     left: 48%;
 }
 
 .buttons button#slide_2 {
+    color: var(--secondaryColor);
     position: absolute;
     left: 50%;
 }
 
 .buttons button#slide_3 {
+    color: var(--secondaryColor);
     position: absolute;
     left: 52%;
 }
 
 .buttons button#slide_4 {
+    color: var(--secondaryColor);
     position: absolute;
     left: 54%;
 }
 
 .buttons button#next {
+    color: var(--secondaryColor);
+    opacity: 0.5;
+    top: 35%;
+    right: 1%;
     position: absolute;
-    left: 56%;
+}
+
+.buttons button#next:hover {
+    opacity: 1;
 }
 
 .buttons button {
@@ -187,19 +210,19 @@ nav a:hover{
 .slide:first-child {
     background: url(../images/carousel_1.jpg) no-repeat;
     background-size: cover;
-    background-position: top -200px right 60%;
+    background-position: top -130px right 60%;
 }
 
 .slide:nth-child(2) {
     background: url(../images/carousel_2.png) no-repeat;
     background-size: cover;
-    background-position: top -140px right 50%;
+    background-position: top -180px right 50%;
 }
 
 .slide:nth-child(3) {
-    background: url(../images/carousel_3.jpg) no-repeat;
+    background: url(../images/carousel_3.PNG) no-repeat;
     background-size: cover;
-    background-position: top -40px right 50%;
+    background-position: top -160px right 50%;
 }
 
 .slide:nth-child(4) {

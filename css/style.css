@@ -73,6 +73,19 @@ nav a:hover{
     color: var(--secondaryColor);
 }
 
+#checkbtn {
+    font-size: 35px;
+    color: var(--white);
+    margin-top: 5px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 /*Image slider section*/
 .slider {
     position: relative;
@@ -111,7 +124,6 @@ nav a:hover{
     color: var(--white);
 
     padding: 20px;
-    border-radius: 5px;
     box-shadow: 10px 10px 0px rgb(99, 140, 27);
 }
 
@@ -181,28 +193,26 @@ nav a:hover{
 
 /*Media queries*/
 /*Navigation bar*/
-@media (max-width: 768px) {
-    .container{
-        margin: auto;
-        width: 80%;
+@media (max-width: 660px) {
+    #checkbtn {
+        display: block;
     }
 
     header img{
         display: block;
-        width: 150px;
-        margin: auto;
         float: none;
     }
 
     nav {
         float: none;
-        margin: auto;
-        line-height: 3rem;
+        display: block;
+        transition: all 0.5s;
     }
 
     nav ul li {
         text-align: center;
         display: block;
+        margin-top: 10px;
     }
 }
 

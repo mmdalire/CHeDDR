@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll('.slide');
+const slide = document.querySelectorAll('.slide');
 const prev = document.querySelector('#prev');
 const next = document.querySelector('#next');
 const auto = true;
@@ -16,7 +16,7 @@ const nextSlide = () => {
     }
     else {
         //if it is the last one, return to first element
-        slides[0].classList.add('current');
+        slide[0].classList.add('current');
     }
     //Sets delay
     setTimeout(() => current.classList.remove('current'));
@@ -33,7 +33,7 @@ const prevSlide = () => {
     }
     else {
         //if it is the first one, return to last element
-        slides[slides.length - 1].classList.add('current');
+        slide[slide.length - 1].classList.add('current');
     }
     //Sets delay
     setTimeout(() => current.classList.remove('current'));

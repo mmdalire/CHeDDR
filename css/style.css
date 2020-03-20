@@ -4,6 +4,7 @@
 /* Variables */
 :root {
     --primaryColor: rgb(140, 198, 63);
+    --darkerPrimaryColor: rgb(99, 140, 27);
     --secondaryColor: rgb(121, 63, 198);
     --white: rgb(255, 255, 255);
 }
@@ -15,10 +16,12 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--secondaryColor);
+    overflow-x: hidden;
 }
 
 a{
@@ -40,6 +43,17 @@ header {
 header img {
     width: 70px;
     float: left;
+}
+
+header span {
+    padding: 10px 0;
+    position: absolute;
+    top: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--white);
+    letter-spacing: 3px;
 }
 
 nav {
@@ -162,6 +176,65 @@ nav a:hover{
     outline: none;
 }
 
+/*About section*/
+#about h1 {
+    margin: 20px 0;
+    color: var(--white);
+}
+
+#about h2 {
+    margin: 10px 0;
+    color: var(--white);
+    font-weight: normal;
+}
+
+/*Prototype*/
+#about #prototype{
+    background-color: var(--primaryColor);
+    padding: 0;
+    display: flex;
+}
+
+#about img {
+    outline: 5px solid var(--white);
+    outline-offset: -25px;
+    width: 400px;
+}
+
+#about #prototype .banner {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    background-color: var(--darkerPrimaryColor);
+}
+
+#about #prototype .banner p{
+    padding: 60px;
+    color: var(--white);
+    font-size: 18px;
+    line-height: 2;
+}
+
+/*Objectives*/
+#about #objectivesContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#about #objectivesContainer #objectives {
+    background-color: var(--primaryColor);
+    width: 380px;
+    text-align: center;
+}
+
+#about #objectivesContainer #objectives div {
+    display: inline-block;
+    font-size: 70px;
+    color: var(--white);
+}
+
 /*Media queries*/
 @media (max-width: 1000px) {
     /*Image slider*/
@@ -170,7 +243,7 @@ nav a:hover{
     } 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
     /*Navigation bar*/
     #checkbtn {
         display: block;
@@ -179,6 +252,10 @@ nav a:hover{
     header img{
         display: block;
         float: none;
+    }
+
+    header span {
+        left: 110px;
     }
 
     nav {

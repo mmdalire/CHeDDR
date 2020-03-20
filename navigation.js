@@ -43,7 +43,7 @@ sideMenu.addEventListener('click', e => {
 
 //Responsiveness of the screen
 //For navigation bar
-matchMedia('(max-width: 700px)').addListener(e => {
+matchMedia('(max-width: 750px)').addListener(e => {
     changeNav.style.display = 'block';
     if (e.matches) {
         //Hide navigation bar and place button

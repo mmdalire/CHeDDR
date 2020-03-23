@@ -6,6 +6,7 @@
     --primaryColor: rgb(140, 198, 63);
     --darkerPrimaryColor: rgb(99, 140, 27);
     --secondaryColor: rgb(121, 63, 198);
+    --lighterSecondaryColor: rgb(155, 79, 255);
     --white: rgb(255, 255, 255);
 }
 
@@ -24,7 +25,19 @@ body {
     overflow-x: hidden;
 }
 
-hr {
+h1 {
+    margin: 20px 0;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+h2 {
+    margin: 10px 0;
+    color: var(--white);
+    font-weight: normal;
+}
+
+hr{
     height: 5px;
     background-color: var(--primaryColor);
     border: solid 1px var(--primaryColor);
@@ -35,18 +48,23 @@ a{
     text-decoration: none;
 }
 
-header .container{
+b{
+    display: block;
+    font-size: 30px;
+}
+
+.container{
     margin: auto;
     width: 90%;
     overflow: hidden;
 }
 
-#about .container, 
-#features .container{
-    margin: auto;
-    width: 90%;
-    overflow: hidden;
-    padding-bottom: 30px;
+.banner{
+    border-radius: 0 80px 80px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    background-color: var(--darkerPrimaryColor);
 }
 
 /*Navigation bar*/
@@ -137,12 +155,16 @@ nav a:hover{
     opacity: 1;
 }
 
-.slide .content h1 {
+.slide 
+.content h1 {
     line-height: 1;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: initial;
 }
 
-.slide .content {
+.slide 
+.content {
     position: absolute;
     top: 40vh;
     right: -470px;
@@ -156,32 +178,15 @@ nav a:hover{
     box-shadow: 10px 10px 0px var(--darkerPrimaryColor);
 }
 
-.slide.current .content {
+.slide.current 
+.content {
     opacity: 1;
     transform: translateX(-480px);
     transition: all 0.7s ease-in-out 0.3s;
 }
 
-
-.buttons button#prev:hover, .buttons button#next:hover  {
-    opacity: 1;
-}
-
-.buttons button#prev {
-    color: var(--secondaryColor);
-    opacity: 0.5;
-    position: absolute;
-    left: 1%;
-}
-
-.buttons button#next {
-    color: var(--secondaryColor);
-    opacity: 0.5;
-    right: 1%;
-    position: absolute;
-}
-
-.buttons button {
+/*Buttons*/
+button {
     top: 35%;
     border: 2px solid transparent;
     background-color: transparent;
@@ -191,58 +196,71 @@ nav a:hover{
     outline: none;
 }
 
-/*About section*/
-#about h1 {
-    margin: 20px 0;
-    color: var(--white);
-    text-transform: uppercase;
+button#prev:hover, 
+button#next:hover  {
+    opacity: 1;
 }
 
-#about h2 {
-    margin: 10px 0;
-    color: var(--white);
-    font-weight: normal;
+button#prev {
+    color: var(--secondaryColor);
+    opacity: 0.5;
+    position: absolute;
+    left: 1%;
+}
+
+button#next {
+    color: var(--secondaryColor);
+    opacity: 0.5;
+    right: 1%;
+    position: absolute;
+}
+
+/*About section*/
+#about .container, 
+#features .container{
+    padding-bottom: 30px;
 }
 
 /*Prototype*/
-#prototype{
+#prototype,
+#eachFeature {
     background-color: var(--primaryColor);
     padding: 0;
+    margin-top: 20px;
+    margin-right: 23px;
     border-radius: 100px;
     display: flex;
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
 }
 
-#about img {
+#about img,
+#features img {
     outline: 5px solid var(--white);
     outline-offset: -25px;
     width: 400px;
 }
 
-#prototype .banner {
-    border-radius: 0 80px 80px 0;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-right: 30px;
-    background-color: var(--darkerPrimaryColor);
-}
-
-#prototype .banner p{
+#prototype .banner p,
+#features .banner p{
     padding: 60px;
     color: var(--white);
     font-size: 18px;
     line-height: 2;
 }
 
-/*Objectives and beneficiaries*/
+/*Objectives, beneficiaries, and purpose*/
 #objectivesContainer, 
-#beneficiariesContainer{
+#beneficiariesContainer,
+#purposesContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-right: 20px;
 }
 
 #objectives, 
-#beneficiaries{
+#beneficiaries,
+#purposes {
     background-color: var(--primaryColor);
     width: 380px;
     text-align: center;
@@ -260,7 +278,8 @@ nav a:hover{
 }
 
 #objectives div:not(:nth-child(2)), 
-#beneficiaries div:not(:nth-child(2)){
+#beneficiaries div:not(:nth-child(2)),
+#purposes div:not(:nth-child(2)) {
     border-radius: 10px 10px 0 0;
     display: block;
     background-color: var(--darkerPrimaryColor);
@@ -269,16 +288,89 @@ nav a:hover{
 }
 
 #objectives div h3, 
-#beneficiaries div h3{
+#beneficiaries div h3, 
+#purposes div h3{
     font-size: 30px;
     margin-top: -10px;
     padding-bottom: 10px;
 }
 
 #objectives p, 
-#beneficiaries p{
+#beneficiaries p, 
+#purposes p{
     color: var(--white);
     padding: 20px;
+}
+
+/*Features*/
+#features {
+    background-color: var(--primaryColor);
+}
+
+#features hr {
+    background-color: var(--secondaryColor);
+    border: solid 1px var(--secondaryColor);
+}
+
+#eachFeature {
+    background-color: var(--lighterSecondaryColor);
+}
+
+#features .banner{
+    background-color: var(--secondaryColor);
+}
+
+#eachFeature:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#eachFeature:nth-child(even) .banner {
+    border-radius: 80px 0 0 80px;
+    margin-left: 30px;
+    margin-right: 0;
+}
+
+/*----Case studies----*/
+#caseStudies {
+    background-color: var(--secondaryColor);
+}
+
+/*Duration*/
+#duration{
+    display: flex;
+    justify-content: space-around;
+    color: var(--white);
+}
+
+#start,
+#end {
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--primaryColor);
+    width: 40%;
+    padding: 20px 20px 20px 0;
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+}
+
+#start .innerContainer span,
+#end .innerContainer span {
+    margin: auto 0 auto 40px;
+    background-color: var(--darkerPrimaryColor);
+}
+
+.innerContainer {
+    background-color: var(--darkerPrimaryColor);
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    padding-left: 50px;
+    width: 100%;
+    display: flex;
+}
+
+/*Purposes*/
+/*Link to /objectives and beneficiaries section/*/
+#purposes:first-child div h3{
+    font-size: 25px;
 }
 
 /*Media queries*/

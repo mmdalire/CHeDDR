@@ -67,6 +67,21 @@ b{
     background-color: var(--darkerPrimaryColor);
 }
 
+.rightSideTriangle {
+    margin-left: -150px;
+    width: 0;
+    height: 0;
+    border-bottom: solid var(--darkerPrimaryColor) 250px;
+    border-left: solid transparent 180px;
+}
+
+.rectangle {
+    background-color: var(--darkerPrimaryColor);
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    padding-top: 2px;
+}
+
 /*Navigation bar*/
 header {
     background: rgb(255,255,255);
@@ -251,7 +266,9 @@ button#next {
 /*Objectives, beneficiaries, and purpose*/
 #objectivesContainer, 
 #beneficiariesContainer,
-#purposesContainer {
+#purposesContainer,
+#rolesContainer,
+#finalProductContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -260,7 +277,8 @@ button#next {
 
 #objectives, 
 #beneficiaries,
-#purposes {
+#purposes,
+.memberRoles {
     background-color: var(--primaryColor);
     width: 380px;
     text-align: center;
@@ -371,6 +389,69 @@ button#next {
 /*Link to /objectives and beneficiaries section/*/
 #purposes:first-child div h3{
     font-size: 25px;
+}
+
+/*Team / Roles*/
+.memberRoles {
+    text-align: left;
+    margin-top: 20px;
+    width: 580px;
+    display: flex;
+}
+
+.memberRoles:first-child, 
+.memberRoles:nth-child(2) {
+    margin-top: 0;
+}
+
+#rolesContainer .person {
+    border-radius: 50%;
+    width: 200px;
+    margin: 20px;
+    z-index: 1;
+}
+
+.rectangle hr {
+    color: var(--white);
+    background-color: var(--white);
+    width: 90%;
+}
+
+.rectangle ul {
+    padding: 10px 20px 10px 10px;
+    color: var(--white);
+}
+
+.rectangle li img {
+    width: 50px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+/*Final product*/
+#finalProductContainer {
+    background-color: var(--primaryColor);
+    border-radius: 10px;
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    padding: 30px 30px 30px 0;
+    width: 98.5%;
+}
+
+#finalProductContainer .innerContainer {
+    padding-left: 20px;
+}
+
+#finalProductContainer iframe{
+    margin: 10px 30px 10px 10px;
+}
+
+#finalProductContainer .innerContainer div{
+    width: 500px;
+}
+
+#finalProductContainer .innerContainer div p {
+    color: var(--white);
+    padding: 20px 10px 20px 0;
 }
 
 /*Media queries*/

@@ -75,6 +75,14 @@ b{
     border-left: solid transparent 180px;
 }
 
+.leftSideTriangle {
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-bottom: solid transparent 100px;
+    border-left: solid var(--darkerPrimaryColor) 100px;
+}
+
 .rectangle {
     background-color: var(--darkerPrimaryColor);
     width: 100%;
@@ -268,7 +276,8 @@ button#next {
 #beneficiariesContainer,
 #purposesContainer,
 #rolesContainer,
-#finalProductContainer {
+#finalProductContainer,
+#approachContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -278,6 +287,7 @@ button#next {
 #objectives, 
 #beneficiaries,
 #purposes,
+.methodology,
 .memberRoles {
     background-color: var(--primaryColor);
     width: 380px;
@@ -389,6 +399,63 @@ button#next {
 /*Link to /objectives and beneficiaries section/*/
 #purposes:first-child div h3{
     font-size: 25px;
+}
+
+/*Approach*/
+#research {
+    display: flex;
+    background-color: var(--primaryColor);
+    color: var(--white);
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+}
+
+#research .rectangle {
+    text-align: center;
+    margin: 0;
+    border-radius: 10px 0 0 10px;
+    padding: 30px 0 30px 30px;
+    width: 300px;
+}
+
+#research .caption {
+    margin: auto 30px;
+    width: 50%;
+}
+
+#methodologiesContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.methodology {
+    margin-top: 20px;
+    width: 550px;
+    height: 350px;
+}
+
+.methodology .header{
+    margin-top: -10px;
+    background-color: var(--darkerPrimaryColor);
+    border-radius: 10px 10px 0 0;
+    color: var(--white);
+    padding: 10px;
+}
+
+.methodology p{
+    color: var(--white);
+    text-align: justify;
+    margin: auto 10px;
+    padding: 10px;
+}
+
+.methodology li {
+    margin-left: 20px;
+    text-align: left;
+    color: var(--white);
 }
 
 /*Team / Roles*/

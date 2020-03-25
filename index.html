@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Crop Health Detection Drone for Rice Fields (CHeDDR) is a remote-controlled drone that monitors and assess healthiness of the rice field inside of the captured image.">
         <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/9f767eca8f.js" crossorigin="anonymous"></script>
+        <!--<script src="https://kit.fontawesome.com/9f767eca8f.js" crossorigin="anonymous"></script>-->
         <title>CHeDDR | Home</title>
     </head>
     <body>
@@ -188,7 +188,7 @@
                 <hr>
 
                 <!--Duration-->
-                <h2>Duration</h2>
+                <h2>Duration of project</h2>
                 <div id="duration">
                     <div id="start">
                         <div class="innerContainer">
@@ -242,7 +242,64 @@
                 <!--Approach-->
                 <h2>Approach</h2>
                 <section id="approachContainer">
-
+                    <div id="research">
+                        <div class="rectangle">
+                            <i class="fas fa-search fa-5x"></i>
+                            <b>Research stage</b>
+                        </div>
+                        <div class="leftSideTriangle"></div>
+                        <div class="caption">
+                            <p>The team chose rice fields as the main subject for measurement since rice is mainly imported and is largely consumed in the Philippines. Throughout the rice's growth and photosynthesis, a certain stage is the basis for determining the healthiness of the rice through a remote sensing technology. With the help of reliable sources and some agricultural experts, they were able to confirm that the research can be possible.</p>
+                        </div>
+                    </div>
+                    <div id="methodologiesContainer">
+                        <div class="methodology">
+                            <div class="header">
+                                <b>Drone assembly</b>
+                            </div>
+                            <p>To make sure that the drone flies according to user's input through a remote control, a thorough research must be done to pick the appropriate components for assembling. It should be properly calibrated, accurately perform different actions done by the user, and secure its flight throughout the operation. </p>
+                            <p>
+                                Tools used:
+                                <li>MAPIR Survey3N Camera (camera)</li>
+                                <li>Pixhawk 2.4.6 Flight Controller</li>
+                                <li>QGround Control (calibration of drone)</li>
+                                <li>Mission Planner (also for calibration)</li>
+                            </p>
+                        </div>
+                        <div class="methodology">
+                            <div class="header">
+                                <b>Connectivity between components</b>
+                            </div>
+                            <p>As the drone was assembled together with the camera and a mini-computer, connection between these devices to ground station is needed for transferring of images and to show the live-feed footage real-time to locate the drone while on flight. </p>
+                            <p>
+                                Tools used:
+                                <li>Raspberry Pi 3B+(microcomputer used)</li>
+                                <li>Python (programming language)</li>
+                                <li>RPI.GPIO (library for RPi)</li>
+                            </p>
+                        </div>
+                        <div class="methodology">
+                            <div class="header">
+                                <b>NDVI assessment</b>
+                            </div>
+                            <p>Healthiness detection (no detection for diseases and pests in the plant) was made possible by using a remote sensing technology called NDVI. Each pixel of an image is being computed for NDVI value and being categorized according to its healthiness level. The app displays the measured image together with the legends for ease of readability for non-technical users.</p>
+                            <p>
+                                Tools used:
+                                <li>C++ (programming language)</li>
+                                <li>OpenCV 3.6 (library for image processing</li>
+                            </p>
+                        </div>
+                        <div class="methodology">
+                            <div class="header">
+                                <b>GUI application creation</b>
+                            </div>
+                            <p>CHeDDR serves as the main application for users who wants to measure images being transferred from drone, proper naming of the batched images to be processed, and viewing of the measured images in the file system. </p>
+                            <p>
+                                Tools used:
+                                <li>Java (programming language)</li>
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
                 <!--Team / Roles-->
@@ -311,6 +368,8 @@
                         </div>
                     </div>
                 </section>
+
+                <!--Achievements-->
             </div>
         </section>
         <!--Scripts-->

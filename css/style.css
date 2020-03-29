@@ -77,7 +77,7 @@ b{
 .leftSideTriangle {
     width: 0;
     height: 0;
-    border-top: 100px solid transparent;
+    border-top: solid transparent 100px;
     border-bottom: solid transparent 100px;
     border-left: solid var(--darkerPrimaryColor) 100px;
 }
@@ -96,7 +96,7 @@ header {
 }
 
 header img {
-    width: 70px;
+    max-width: 70px;
     float: left;
 }
 
@@ -180,8 +180,7 @@ nav a:hover{
 .slide 
 .content h1 {
     line-height: 1;
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     text-transform: initial;
 }
 
@@ -237,128 +236,70 @@ button#next {
     position: absolute;
 }
 
-/*About section*/
-#about .container, 
-#features .container{
+/*About the prototype section*/
+#prototypeSection .container{
     padding-bottom: 30px;
 }
 
-/*Prototype*/
-#prototype,
-#eachFeature {
+#prototype {
     background-color: var(--primaryColor);
     padding: 0;
-    margin-top: 20px;
-    margin-right: 23px;
+    margin: 20px 23px 0 0;
     border-radius: 100px;
     display: flex;
-    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);    
 }
 
-#about img,
-#features img {
+#prototype img {
     outline: 5px solid var(--white);
     outline-offset: -25px;
     width: 400px;
+    object-fit: cover;
 }
 
-#prototype .banner p,
-#features .banner p{
+#prototype .banner p {
     padding: 20px 40px;
     color: var(--white);
     font-size: 18px;
 }
 
-/*Objectives, beneficiaries, and purpose*/
-#objectivesContainer, 
-#beneficiariesContainer,
-#purposesContainer,
-#rolesContainer,
-#finalProductContainer,
-#approachContainer {
+/*Feature*/
+.feature {
+    background-color: var(--primaryColor);
+    padding: 0;
+    margin: 20px 23px 20px 0;
+    border-radius: 100px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-right: 20px;
-}
-
-#objectives, 
-#beneficiaries,
-#purposes,
-.methodology,
-.memberRoles {
-    background-color: var(--primaryColor);
-    width: 380px;
-    text-align: center;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
-    border-radius: 10px;
 }
 
-.arrowDown {
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-    border-left: 190px solid transparent;
-    border-right: 190px solid transparent;
-    border-top: 30px solid var(--darkerPrimaryColor);
-}
-
-#objectives div:not(:nth-child(2)), 
-#beneficiaries div:not(:nth-child(2)),
-#purposes div:not(:nth-child(2)) {
-    border-radius: 10px 10px 0 0;
-    display: block;
-    background-color: var(--darkerPrimaryColor);
-    font-size: 60px;
-    color: var(--white);
-}
-
-#objectives div h3, 
-#beneficiaries div h3, 
-#purposes div h3{
-    font-size: 30px;
-    margin-top: -10px;
-    padding-bottom: 10px;
-}
-
-#objectives p, 
-#beneficiaries p, 
-#purposes p{
-    color: var(--white);
-    padding: 20px;
-}
-
-/*Features*/
-#features {
-    background-color: var(--primaryColor);
-}
-
-#features hr {
-    background-color: var(--secondaryColor);
-    border: solid 1px var(--secondaryColor);
-}
-
-#eachFeature {
-    background-color: var(--lighterSecondaryColor);
-}
-
-#features .banner{
-    background-color: var(--secondaryColor);
-}
-
-#eachFeature:nth-child(even) {
+.feature:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-#eachFeature:nth-child(even) .banner {
+.feature:nth-child(even) .banner {
     border-radius: 80px 0 0 80px;
     margin-left: 30px;
     margin-right: 0;
 }
 
+.feature img {
+    outline: 5px solid var(--white);
+    outline-offset: -25px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.feature .banner p{
+    padding: 20px 40px;
+    color: var(--white);
+    font-size: 18px;
+}
+
 #criterias {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding-left:38px;
     list-style-type: none;
 }
@@ -387,45 +328,50 @@ button#next {
     border-radius: 20px;
 }
 
-/*----Case studies----*/
-#caseStudies {
-    background-color: var(--secondaryColor);
+/*Objectives*/
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;
 }
 
-/*Duration*/
-#duration{
-    display: flex;
-    justify-content: space-around;
+.gridDisplay {
+    background-color: var(--primaryColor);
+    width: 380px;
+    text-align: center;
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.arrowDown {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-left: 190px solid transparent;
+    border-right: 190px solid transparent;
+    border-top: 30px solid var(--darkerPrimaryColor);
+}
+
+.gridDisplay div:not(:nth-child(2)) {
+    border-radius: 10px 10px 0 0;
+    display: block;
+    background-color: var(--darkerPrimaryColor);
+    font-size: 60px;
     color: var(--white);
 }
 
-#start,
-#end {
-    display: flex;
-    border-radius: 10px;
-    background-color: var(--primaryColor);
-    width: 40%;
-    padding: 20px 20px 20px 0;
-    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+.gridDisplay div h3 {
+    font-size: 30px;
+    margin-top: -10px;
+    padding-bottom: 10px;
 }
 
-#start .innerContainer span,
-#end .innerContainer span {
-    margin: auto 0 auto 40px;
-    background-color: var(--darkerPrimaryColor);
+.gridDisplay p{
+    color: var(--white);
+    padding: 20px;
 }
-
-.innerContainer {
-    background-color: var(--darkerPrimaryColor);
-    border-radius: 0 10px 10px 0;
-    margin-left: 0;
-    padding-left: 50px;
-    width: 100%;
-    display: flex;
-}
-
-/*Purposes*/
-/*Link to /objectives and beneficiaries section/*/
 
 /*Approach*/
 #research {
@@ -435,6 +381,7 @@ button#next {
     width: 100%;
     border-radius: 10px;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    margin: 20px 0;
 }
 
 #research .rectangle {
@@ -442,28 +389,28 @@ button#next {
     margin: 0;
     border-radius: 10px 0 0 10px;
     padding: 30px 0 30px 30px;
-    width: 300px;
+    width: 400px;
 }
 
 #research .caption {
-    margin: auto 30px;
-    width: 50%;
+    padding: 20px;
+    width: 100%;
 }
 
-#methodologiesContainer {
+#approaches {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.methodology {
+#approaches .gridDisplay{
     margin-top: 20px;
     width: 550px;
     height: 350px;
 }
 
-.methodology .header{
+#approaches .gridDisplay .header{
     margin-top: -10px;
     background-color: var(--darkerPrimaryColor);
     border-radius: 10px 10px 0 0;
@@ -471,107 +418,107 @@ button#next {
     padding: 10px;
 }
 
-.methodology p{
+#approaches .gridDisplay p{
     color: var(--white);
     text-align: justify;
     margin: auto 10px;
     padding: 10px;
 }
 
-.methodology li {
+#approaches .gridDisplay li {
     margin-left: 20px;
     text-align: left;
     color: var(--white);
 }
 
-/*Team / Roles*/
+/*Final product*/ 
+#finalProductSection .flexContainer {
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    margin: 20px 0;
+    padding: 20px 100px;
+    width: 97%;
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    display: flex;
+}
+
+#finalProductSection .flexContainer #watchVideo {
+    font-size: 150px;
+} 
+
+.fab.fa-youtube:hover {
+    color: red;
+    transition: 0.5s all ease-in-out;
+} 
+
+#finalProductSection .flexContainer .caption {
+    width: 300px;
+    flex-basis: 70%;
+    padding: 35px;
+}
+
+/*Team and Roles*/
+#rolesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin: 20px 0;
+}
+
 .memberRoles {
+    background-color: var(--primaryColor);
+    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    border-radius: 10px;
     text-align: left;
     margin-top: 20px;
     width: 580px;
     display: flex;
 }
 
-.memberRoles:first-child, 
-.memberRoles:nth-child(2) {
-    margin-top: 0;
-}
-
-#rolesContainer .person {
+.memberRoles .person {
     border-radius: 50%;
     width: 200px;
     margin: 20px;
     z-index: 1;
+    object-fit: cover;
 }
 
 .rectangle hr {
     color: var(--white);
     background-color: var(--white);
-    width: 90%;
+    width: 100%;
 }
 
 .rectangle ul {
     padding: 10px 20px 10px 10px;
     color: var(--white);
+    list-style: disc;
 }
 
-.rectangle li img {
-    width: 50px;
-    margin-left: 40px;
-    margin-right: 20px;
-}
-
-/*Final product*/
-#finalProductContainer {
-    margin-bottom: 20px;
-    background-color: var(--primaryColor);
-    border-radius: 10px;
-    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
-    padding: 30px 30px 30px 0;
-    width: 98.5%;
-}
-
-#finalProductContainer .innerContainer {
-    padding-left: 20px;
-}
-
-#finalProductContainer iframe{
-    margin: 10px 30px 10px 10px;
-}
-
-#finalProductContainer .innerContainer div{
-    width: 500px;
-}
-
-#finalProductContainer .innerContainer div p {
-    color: var(--white);
-    padding: 20px 10px 20px 0;
-}
 
 /*----Contact Us section----*/
 /*Profile*/
-#contactUs {
-    background-color: var(--primaryColor);
-}
-
 #contactUs hr {
-    background-color: var(--secondaryColor);
-    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    color: var(--primaryColor);
 }
 
 .memberContacts {
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin: 0 0 20px -10px;
+    flex-wrap: wrap;
+    margin: 20px 0 20px -10px;
 }
 
-.member{
-    background-color: var(--lighterSecondaryColor);
+.member {
+    background-color: var(--primaryColor);
     width: 280px;
     height: 300px;
     border-radius: 10px;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
+    margin: 20px 0;
 }
 
 .member img {
@@ -579,11 +526,12 @@ button#next {
     margin: 20px auto;
     width: 150px;
     border-radius: 50%;
-    border: 5px solid var(--secondaryColor);
+    border: 5px solid var(--darkerPrimaryColor);
+    object-fit: cover;
 }
 
 .description {
-    background-color: var(--secondaryColor);
+    background-color: var(--darkerPrimaryColor);
     color: var(--white);
     margin-top: -70px;
     padding: 50px 20px 20px 20px;
@@ -612,7 +560,7 @@ button#next {
 /*Form*/
 #contactForm {
     padding: 3px 20px 15px 20px;
-    background-color: var(--secondaryColor);
+    background-color: var(--darkerPrimaryColor);
     border-radius: 10px;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
     margin: 10px 20px 40px 0;
@@ -622,13 +570,11 @@ button#next {
     color: gray;
 }
 
-#name,
-#email,
-#subject,
-#message{
+input,
+textarea {
     display: block;
     border: solid transparent 5px;
-    color: var(--secondaryColor);
+    color: var(--darkerPrimaryColor);
     font-size: 15px;
     font-weight: bold;
     width: 100%;
@@ -647,7 +593,7 @@ input[type="submit"] {
     padding: 5px 20px;
     border-radius: 10px;
     border: solid var(--white) 3px;
-    background-color: var(--secondaryColor);
+    background-color: var(--darkerPrimaryColor);
     color: var(--white);
     margin: 0 50%;
 }
@@ -656,7 +602,7 @@ input[type="submit"] {
 footer {
     display: fixed;
     padding: 10px 0;
-    background-color: var(--secondaryColor);
+    background-color: var(--darkerPrimaryColor);
     text-align: center;
 }
 
@@ -665,7 +611,62 @@ footer img {
 }
 
 /*Media queries*/
-@media (max-width: 1000px) {
+@media (max-width: 1320px) {
+    .gridDisplay {
+        width: 100%;
+    }
+
+    /*Team and Roles*/
+    #rolesContainer {
+        margin: 20px auto;
+        justify-content: center;
+    }
+
+    /*Team and Roles*/
+    #rolesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 20px;
+        margin: 20px 0;
+    }
+}
+
+/*Media queries*/
+@media (max-width: 1320px) {
+    .leftSideTriangle {
+        display: none;
+    }
+
+    #research .rectangle {
+        padding-right: 30px;
+    }
+
+    /*Features*/
+    #criterias li{
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    /*Approach*/
+    #approaches .gridDisplay {
+        width: 100%;
+        height: auto;
+    }
+
+    /*Contact Us*/
+    #rolesContainer .memberRoles {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .member {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px) {
     /*Image slider*/
     .slide:first-child, 
     .slide:nth-child(2), 
@@ -673,9 +674,23 @@ footer img {
     .slide:nth-child(4) {
         background-size: fixed;
     } 
+
+    /*Approach*/
+    #research {
+        display: initial;
+    }
+
+    #research .rectangle {
+        width: 100%;
+    }
+
+    #research .caption {
+        width: 100%;
+        padding: 10px auto;
+    }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 950px) {
     /*Navigation bar*/
     #checkbtn {
         display: block;
@@ -704,7 +719,96 @@ footer img {
 
     /*Image slider*/
     .slide .content {
+        width: 80%;
+    }
+
+    /*Prototype*/
+    #prototype img {
+        outline: 5px solid var(--white);
+        outline-offset: -25px;
+        width: 400px;
+        height: auto;
+    }
+
+    /*Final product*/
+    #finalProductSection .flexContainer {
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #finalProductSection .flexContainer .caption {
         width: 100%;
+        padding: 35px 0;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 820px) {
+    /*About protoype*/
+    #prototype {
+        display: block;
+        border-radius: 0 0 20px 20px;
+    }
+
+    #prototype img {
+        width: 100%;
+    }
+
+    #prototype .banner{
+        padding-bottom: 30px;
+        margin: 20px 0;
+        border-radius: 0 0 20px 20px;
+        text-align: justify;
+    }
+
+    /*Features*/
+    .feature {
+        display: block;
+        border-radius: 0 0 20px 20px;
+    }
+
+    #featuresSection img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .feature .banner, 
+    .feature:nth-child(even) .banner {
+        padding-bottom: 30px;
+        margin: 20px 0;
+        border-radius: 0 0 20px 20px;
+        text-align: justify;
+    }
+
+    #criterias {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrowDown {
+        display: none;
+    }
+
+    #rolesContainer .rightSideTriangle {
+        display: none;
+    }
+
+    /*Contact Us */
+    .member {
+        width: 280px;
+    }
+
+    /*Team and roles*/
+    .memberRoles {
+        display: block;
+        text-align: center;
+    }
+
+    .rectangle ul {
+        padding: 30px;
+        text-align: justify;
     }
 }
 

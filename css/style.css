@@ -24,6 +24,9 @@
 body {
     background-color: var(--secondaryColor);
     overflow-x: hidden;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 h1 {
@@ -190,18 +193,16 @@ nav a:hover{
     top: 40vh;
     right: -470px;
     opacity: 0;
-    width: 500px;
-
+    width: 600px;
     background-color: var(--primaryColor);
     color: var(--white);
-
     padding: 20px;
     box-shadow: 10px 10px 0px var(--darkerPrimaryColor);
 }
 
 .slide.current 
 .content {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateX(-480px);
     transition: all 0.7s ease-in-out 0.3s;
 }
@@ -232,7 +233,7 @@ button#prev {
 button#next {
     color: var(--secondaryColor);
     opacity: 0.5;
-    right: 1%;
+    right: 2%;
     position: absolute;
 }
 
@@ -345,6 +346,10 @@ button#next {
     margin: 20px 0;
 }
 
+.gridDisplay p{
+    text-align: justify;
+}
+
 .arrowDown {
     width: 0;
     height: 0;
@@ -374,7 +379,8 @@ button#next {
 }
 
 /*Approach*/
-#research {
+#research,
+#finalProduct {
     display: flex;
     background-color: var(--primaryColor);
     color: var(--white);
@@ -384,7 +390,8 @@ button#next {
     margin: 20px 0;
 }
 
-#research .rectangle {
+#research .rectangle,
+#finalProduct .rectangle {
     text-align: center;
     margin: 0;
     border-radius: 10px 0 0 10px;
@@ -392,7 +399,9 @@ button#next {
     width: 400px;
 }
 
-#research .caption {
+#research .caption,
+#finalProduct .caption {
+    margin: auto 0;
     padding: 20px;
     width: 100%;
 }
@@ -431,31 +440,10 @@ button#next {
     color: var(--white);
 }
 
-/*Final product*/ 
-#finalProductSection .flexContainer {
-    background-color: var(--primaryColor);
-    border-radius: 20px;
-    margin: 20px 0;
-    padding: 20px 100px;
-    width: 97%;
-    box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
-    display: flex;
-}
-
-#finalProductSection .flexContainer #watchVideo {
-    font-size: 150px;
-} 
-
 .fab.fa-youtube:hover {
     color: red;
     transition: 0.5s all ease-in-out;
 } 
-
-#finalProductSection .flexContainer .caption {
-    width: 300px;
-    flex-basis: 70%;
-    padding: 35px;
-}
 
 /*Team and Roles*/
 #rolesContainer {
@@ -496,12 +484,20 @@ button#next {
     list-style: disc;
 }
 
+/*----Achievements section----*/
+#achievementsSection .flexContainer .gridDisplay {
+    width: 580px;
+}
 
 /*----Contact Us section----*/
 /*Profile*/
-#contactUs hr {
+#contactUsSection {
     background-color: var(--primaryColor);
-    color: var(--primaryColor);
+}
+
+#contactUsSection hr {
+    background-color: var(--secondaryColor);
+    color: var(--secondaryColor);
 }
 
 .memberContacts {
@@ -513,7 +509,7 @@ button#next {
 }
 
 .member {
-    background-color: var(--primaryColor);
+    background-color: var(--lighterSecondaryColor);
     width: 280px;
     height: 300px;
     border-radius: 10px;
@@ -526,12 +522,12 @@ button#next {
     margin: 20px auto;
     width: 150px;
     border-radius: 50%;
-    border: 5px solid var(--darkerPrimaryColor);
+    border: 5px solid var(--secondaryColor);
     object-fit: cover;
 }
 
 .description {
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--secondaryColor);
     color: var(--white);
     margin-top: -70px;
     padding: 50px 20px 20px 20px;
@@ -560,7 +556,7 @@ button#next {
 /*Form*/
 #contactForm {
     padding: 3px 20px 15px 20px;
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--secondaryColor);
     border-radius: 10px;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
     margin: 10px 20px 40px 0;
@@ -574,7 +570,7 @@ input,
 textarea {
     display: block;
     border: solid transparent 5px;
-    color: var(--darkerPrimaryColor);
+    color: var(--secondaryColor);
     font-size: 15px;
     font-weight: bold;
     width: 100%;
@@ -593,7 +589,7 @@ input[type="submit"] {
     padding: 5px 20px;
     border-radius: 10px;
     border: solid var(--white) 3px;
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--secondaryColor);
     color: var(--white);
     margin: 0 50%;
 }
@@ -610,26 +606,26 @@ footer img {
     width: 100px;
 }
 
-/*Media queries*/
-@media (max-width: 1320px) {
-    .gridDisplay {
-        width: 100%;
-    }
+/*----Form Successful----*/
+.formSuccessful {
+    background-color: var(--primaryColor);
+    height: 70vh;
+}
 
-    /*Team and Roles*/
-    #rolesContainer {
-        margin: 20px auto;
-        justify-content: center;
-    }
+.formSuccessful .container{
+    padding: 20px;
+    margin: 50px auto;
+    text-align: center;
+}
 
-    /*Team and Roles*/
-    #rolesContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-right: 20px;
-        margin: 20px 0;
-    }
+.formSuccessful .container p {
+    margin: 20px auto;
+}
+
+.return {
+    border-radius: 10px;
+    border: solid 5px var(--white);
+    padding: 5px;
 }
 
 /*Media queries*/
@@ -638,8 +634,10 @@ footer img {
         display: none;
     }
 
-    #research .rectangle {
+    #research .rectangle,
+    #finalProduct .rectangle {
         padding-right: 30px;
+        border-radius: 10px 10px 0 0;
     }
 
     /*Features*/
@@ -657,6 +655,20 @@ footer img {
     /*Contact Us*/
     #rolesContainer .memberRoles {
         width: 100%;
+    }
+
+    .gridDisplay {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    /*Team and Roles*/
+    #rolesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 20px;
+        margin: 20px 0;
     }
 }
 
@@ -676,15 +688,18 @@ footer img {
     } 
 
     /*Approach*/
-    #research {
+    #research,
+    #finalProduct {
         display: initial;
     }
 
-    #research .rectangle {
+    #research .rectangle,
+    #finalProduct .rectangle {
         width: 100%;
     }
 
-    #research .caption {
+    #research .caption,
+    #finalProduct .caption {
         width: 100%;
         padding: 10px auto;
     }
@@ -719,7 +734,7 @@ footer img {
 
     /*Image slider*/
     .slide .content {
-        width: 80%;
+        width: 100%;
     }
 
     /*Prototype*/
@@ -728,19 +743,6 @@ footer img {
         outline-offset: -25px;
         width: 400px;
         height: auto;
-    }
-
-    /*Final product*/
-    #finalProductSection .flexContainer {
-        display: block;
-        text-align: center;
-        padding: 20px;
-    }
-
-    #finalProductSection .flexContainer .caption {
-        width: 100%;
-        padding: 35px 0;
-        text-align: justify;
     }
 }
 
@@ -768,7 +770,7 @@ footer img {
         border-radius: 0 0 20px 20px;
     }
 
-    #featuresSection img {
+    .feature img {
         width: 100%;
         margin: 0 auto;
     }
@@ -812,10 +814,19 @@ footer img {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 600px) {
     /*Image slider*/
-    .slide .content {
-        margin-top: -50px;
+    .slider {
+        min-width: 100%;
+    }
+
+    .slide.current .content {
+        top: 50vh;
+    }
+
+    button#next,
+    button#prev {
+        display: none;
     }
 }
 
@@ -824,22 +835,40 @@ footer img {
     background: url(../images/carousel_1.jpg) no-repeat;
     background-size: cover;
     background-position: top -130px right 60%;
+    background-attachment: fixed;
 }
 
 .slide:nth-child(2) {
     background: url(../images/carousel_2.jpg) no-repeat;
     background-size: cover;
     background-position: top -210px right 50%;
+    background-attachment: fixed;
 }
 
 .slide:nth-child(3) {
     background: url(../images/carousel_3.jpg) no-repeat;
     background-size: cover;
     background-position: top -160px right 50%;
+    background-attachment: fixed;
 }
 
 .slide:nth-child(4) {
     background: url(../images/carousel_4.jpg) no-repeat;
     background-size: cover;
-    background-position: top -150px right 50%;
+    background-position: top -80px right 50%;
+    background-attachment: fixed;
+}
+
+.slide:nth-child(5) {
+    background: url(../images/nsrc.jpg) no-repeat;
+    background-size: cover;
+    background-position: top -9px right 50%;
+    background-attachment: fixed;
+}
+
+.slide:nth-child(6) {
+    background: url(../images/cores.jpg) no-repeat;
+    background-size: cover;
+    background-position: top -280px right 0%;
+    background-attachment: fixed;
 }

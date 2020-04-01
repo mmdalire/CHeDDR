@@ -3,10 +3,10 @@
 
 /* Variables */
 :root {
-    --primaryColor: rgb(140, 198, 63);
-    --darkerPrimaryColor: rgb(99, 140, 27);
-    --secondaryColor: rgb(121, 63, 198);
-    --lighterSecondaryColor: rgb(189, 138, 255);
+    --lightGreen: rgb(140, 198, 63);
+    --green: rgb(99, 140, 27);
+    --violet: rgb(121, 63, 198);
+    --lightViolet: rgb(189, 138, 255);
     --white: rgb(255, 255, 255);
 }
 
@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: var(--secondaryColor);
+    background-color: var(--violet);
     overflow-x: hidden;
     min-height: 100%;
     display: grid;
@@ -43,8 +43,8 @@ h2 {
 
 hr{
     height: 5px;
-    background-color: var(--primaryColor);
-    border: solid 1px var(--primaryColor);
+    background-color: var(--lightGreen);
+    border: solid 1px var(--lightGreen);
     border-radius: 5px;
 }
 
@@ -66,14 +66,14 @@ b{
 .banner{
     border-radius: 0 80px 80px 0;
     margin: 30px 30px 30px 0;
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--green);
 }
 
 .rightSideTriangle {
     margin-left: -150px;
     width: 0;
     height: 0;
-    border-bottom: solid var(--darkerPrimaryColor) 250px;
+    border-bottom: solid var(--green) 250px;
     border-left: solid transparent 180px;
 }
 
@@ -82,11 +82,11 @@ b{
     height: 0;
     border-top: solid transparent 100px;
     border-bottom: solid transparent 100px;
-    border-left: solid var(--darkerPrimaryColor) 100px;
+    border-left: solid var(--green) 100px;
 }
 
 .rectangle {
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--green);
     width: 100%;
     border-radius: 0 10px 10px 0;
     padding-top: 2px;
@@ -142,7 +142,7 @@ nav ul li {
 
 nav a:hover{
     background-color: white;
-    color: var(--secondaryColor);
+    color: var(--violet);
 }
 
 #checkbtn {
@@ -194,10 +194,10 @@ nav a:hover{
     right: -470px;
     opacity: 0;
     width: 600px;
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     color: var(--white);
     padding: 20px;
-    box-shadow: 10px 10px 0px var(--darkerPrimaryColor);
+    box-shadow: 10px 10px 0px var(--green);
 }
 
 .slide.current 
@@ -224,14 +224,14 @@ button#next:hover  {
 }
 
 button#prev {
-    color: var(--secondaryColor);
+    color: var(--violet);
     opacity: 0.5;
     position: absolute;
     left: 1%;
 }
 
 button#next {
-    color: var(--secondaryColor);
+    color: var(--violet);
     opacity: 0.5;
     right: 2%;
     position: absolute;
@@ -243,7 +243,7 @@ button#next {
 }
 
 #prototype {
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     padding: 0;
     margin: 20px 23px 0 0;
     border-radius: 100px;
@@ -266,7 +266,7 @@ button#next {
 
 /*Feature*/
 .feature {
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     padding: 0;
     margin: 20px 23px 20px 0;
     border-radius: 100px;
@@ -338,7 +338,7 @@ button#next {
 }
 
 .gridDisplay {
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     width: 380px;
     text-align: center;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
@@ -356,13 +356,13 @@ button#next {
     margin: 0 auto;
     border-left: 190px solid transparent;
     border-right: 190px solid transparent;
-    border-top: 30px solid var(--darkerPrimaryColor);
+    border-top: 30px solid var(--green);
 }
 
 .gridDisplay div:not(:nth-child(2)) {
     border-radius: 10px 10px 0 0;
     display: block;
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--green);
     font-size: 60px;
     color: var(--white);
 }
@@ -382,7 +382,7 @@ button#next {
 #research,
 #finalProduct {
     display: flex;
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     color: var(--white);
     width: 100%;
     border-radius: 10px;
@@ -421,7 +421,7 @@ button#next {
 
 #approaches .gridDisplay .header{
     margin-top: -10px;
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--green);
     border-radius: 10px 10px 0 0;
     color: var(--white);
     padding: 10px;
@@ -455,7 +455,7 @@ button#next {
 }
 
 .memberRoles {
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
     border-radius: 10px;
     text-align: left;
@@ -489,15 +489,21 @@ button#next {
     width: 580px;
 }
 
+#link {
+    display: block;
+    font-size: 18px;
+    padding: 5px;
+}
+
 /*----Contact Us section----*/
 /*Profile*/
 #contactUsSection {
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
 }
 
 #contactUsSection hr {
-    background-color: var(--secondaryColor);
-    color: var(--secondaryColor);
+    background-color: var(--violet);
+    color: var(--violet);
 }
 
 .memberContacts {
@@ -509,7 +515,7 @@ button#next {
 }
 
 .member {
-    background-color: var(--lighterSecondaryColor);
+    background-color: var(--lightViolet);
     width: 280px;
     height: 300px;
     border-radius: 10px;
@@ -522,12 +528,12 @@ button#next {
     margin: 20px auto;
     width: 150px;
     border-radius: 50%;
-    border: 5px solid var(--secondaryColor);
+    border: 5px solid var(--violet);
     object-fit: cover;
 }
 
 .description {
-    background-color: var(--secondaryColor);
+    background-color: var(--violet);
     color: var(--white);
     margin-top: -70px;
     padding: 50px 20px 20px 20px;
@@ -556,7 +562,7 @@ button#next {
 /*Form*/
 #contactForm {
     padding: 3px 20px 15px 20px;
-    background-color: var(--secondaryColor);
+    background-color: var(--violet);
     border-radius: 10px;
     box-shadow: 10px 10px 18px -2px rgba(0,0,0,0.75);
     margin: 10px 20px 40px 0;
@@ -570,7 +576,7 @@ input,
 textarea {
     display: block;
     border: solid transparent 5px;
-    color: var(--secondaryColor);
+    color: var(--violet);
     font-size: 15px;
     font-weight: bold;
     width: 100%;
@@ -589,16 +595,23 @@ input[type="submit"] {
     padding: 5px 20px;
     border-radius: 10px;
     border: solid var(--white) 3px;
-    background-color: var(--secondaryColor);
+    background-color: var(--violet);
     color: var(--white);
     margin: 0 50%;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--white);
+    color:var(--violet);
+    transition: all 0.5s;
 }
 
 /*----Footer----*/
 footer {
     display: fixed;
     padding: 10px 0;
-    background-color: var(--darkerPrimaryColor);
+    background-color: var(--green);
     text-align: center;
 }
 
@@ -608,7 +621,7 @@ footer img {
 
 /*----Form Successful----*/
 .formSuccessful {
-    background-color: var(--primaryColor);
+    background-color: var(--lightGreen);
     height: 70vh;
 }
 
@@ -626,6 +639,7 @@ footer img {
     border-radius: 10px;
     border: solid 5px var(--white);
     padding: 5px;
+    cursor: pointer;
 }
 
 /*Media queries*/
